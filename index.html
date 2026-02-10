@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="container"> <!--container-->
+
+        <h2>Generate a <br><span>random password</span></h2> <!--top copy-->
+        <p>Never use an insecure password again</p> <!--top copy-->
+
+        <div> <!--controls for password length and characters-->
+
+            <div class="slider-wrapper"> <!--slider element-->
+                <p>Password length</p>
+                <button id="decrement-btn">-</button>
+
+                <label id="slider-label">
+                    <input id="slider" type="range" min="6" max="22" name="slider" value="14" step="1">
+                </label>
+                
+                <button id="increment-btn">+</button>
+                <p id="slider-count"></p>
+            </div> <!--slider element-->
+
+            <div class="controls-wrapper"> <!--controls-wrapper-->
+                <label class="box-controls">
+                    <input id="numbers-box" type="checkbox" name="char-options" value="yes" checked="checked">
+                    <span class="checkboxes"></span>
+                    Numbers
+                </label>
+            
+
+                <label class="box-controls">
+                    <input id="symbols-box" type="checkbox" name="char-options" value="yes" checked="checked">
+                    <span class="checkboxes"></span>
+                    Symbols
+                </label>
+
+                <label class="box-controls">
+                    <input id="uppercase-box" type="checkbox" name="char-options" value="yes" checked="checked">
+                    <span class="checkboxes"></span>
+                    Uppercase
+                </label>
+
+                <label class="box-controls">
+                    <input id="lowercase-box" type="checkbox" name="char-options" value="yes" checked="checked">
+                    <span class="checkboxes"></span>
+                    Lowercase
+                </label>
+                        
+            </div> <!--controls-wrapper-->
+            <p id="alert"></p>
+        </div> <!--controls for password length and characters-->
+
+        <button id="gen-btn">Generate Passwords</button> <!--generate passwords button-->
+        <p id="click-to-copy">Click the password to copy</p>
+
+        <div class="passwords"> <!--passwords displays-->
+            <div>
+                <input class="password-displays" id="first-password" placeholder="click generate" readonly>
+                <p class="notifications" id="first-pass-not">Password copied!</p>
+            </div>
+            
+            <div>
+                <input class="password-displays" id="second-password" placeholder="click generate" readonly>
+                <p class="notifications" id="second-pass-not">Password copied!</p>
+            </div>
+        </div> <!--passwords displays-->
+
+    </div> <!--container-->
+
+    <script src="index.js"></script>
+</body>
+</html>

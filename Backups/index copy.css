@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: #1e2a37;
+    height: fit-content;
+    width: fit-content;
+    padding: 30px
+}
+
+h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    color: hsl(211 0% 95%);
+    margin: 0;
+}
+
+h2 span {
+    color: #4ede85;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    color: hsl(211 0% 80%);
+    margin: 15px 0 50px 0;
+}
+
+button {
+    background-color: #4ede85;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #1e2a37;
+    padding: 10px 20px;
+    margin: 30px 0 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #31ff80;
+    cursor: pointer;
+}
+
+button:active {
+    scale: 98%;
+}
+
+.passwords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 30px 0 0 0;
+    border-top: 1px solid hsla(211 0% 100% / 0.2);
+}
+
+#click-to-copy {
+    font-style: italic;
+    margin: 0 0 30px 0;
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+.password-displays {
+    height: 30px;
+    width: 220px;
+    background-color: #26394d;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #4ede85;
+    cursor: pointer;
+    caret-color: transparent;
+}
+
+.notifications {
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.active#first-pass-not {
+    opacity: 1;
+}
+
+.active#second-pass-not {
+    opacity: 1;
+}
+
+::placeholder {
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    color:#4ede8580
+}
+
+.slider-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.slider-wrapper p {
+    font-size: 0.8em;
+    margin: 0px;
+}
+
+.slider-wrapper button {
+    margin: 0;
+    padding: 0px;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+}
+
+
+#slider { /* The slider itself */
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    display: flex;
+    height: 5px; /* Specified height */
+    width: 100%; /* Full-width */
+    background: #26394d;
+    outline: none; /* Remove outline */
+    outline: transparent;
+    border-radius: 10px;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: #4ede85;
+    cursor: pointer;
+    box-shadow: -3px 0 0 0 #1e2a37;
+    border-radius: 5px;
+}
+
+#slider::-webkit-slider-thumb:hover {
+    background:#31ff80
+}
+
+#slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4ede85;
+    cursor: pointer;
+    box-shadow: -3px 0 0 0 #1e2a37;
+    border: none;
+    border-radius: 5px;
+}
+
+#slider::-moz-range-thumb:hover {
+    background:#31ff80;
+}
+
+.controls-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.box-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between checkbox and text */
+    cursor: pointer;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    color:hsl(211 0% 80%);
+    font-weight: 100;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#lowercase {
+    margin-right: 0px;
+}
+
+.box-controls input { /* Hide the browser's default checkbox */
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkboxes { /* Create a custom checkbox */
+    height: 16px;
+    width: 16px;
+    background-color: #26394d;
+    border-radius: 4px;
+    flex-shrink: 0; /* prevents squishing */
+    position: relative; /* needed for the :after checkmark */
+}
+
+.checkboxes:after { /* Create the checkmark/indicator (hidden when not checked) */
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.box-controls input:checked ~ .checkboxes:after { /* Show the checkmark when checked */
+    display: block;
+}
+
+.box-controls .checkboxes:after { /* Style the checkmark/indicator */
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 6px;
+    border: solid hsl(211 0% 95%);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#alert {
+    font-size: 0.8em;
+    color: red;
+    margin: 5px 0 0;
+}
