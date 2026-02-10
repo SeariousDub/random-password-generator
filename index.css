@@ -1,5 +1,5 @@
 body {
-    margin: 20px;
+    margin: 0px;
     background-color: #1e2a37;
 }
 
@@ -104,7 +104,7 @@ button:active {
 
 .slider-wrapper {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
