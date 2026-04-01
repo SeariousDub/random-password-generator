@@ -15,24 +15,22 @@
 
     <div class="container"> <!--container-->
 
-        <h1>Generate a <br><span>random password</span></h2> <!--top copy-->
+        <h2>Generate a <br><span>random password</span></h2> <!--top copy-->
         <p>Never use an insecure password again</p> <!--top copy-->
 
         <div> <!--controls for password length and characters-->
 
-            <div class="slider-wrapper"> <!--slider wrapper-->
-                <p class="password-length-header">Password length</p>
+            <div class="slider-wrapper"> <!--slider element-->
+                <p>Password length</p>
+                <button id="decrement-btn">-</button>
 
-                <div class="slider-element">
-                    <button id="decrement-btn">-</button>
-                    <label id="slider-label">
-                        <input id="slider" type="range" min="6" max="22" name="slider" value="14" step="1">
-                    </label>                
-                    <button id="increment-btn">+</button>
-                </div>
-
+                <label id="slider-label">
+                    <input id="slider" type="range" min="6" max="22" name="slider" value="14" step="1">
+                </label>
+                
+                <button id="increment-btn">+</button>
                 <p id="slider-count"></p>
-            </div> <!--slider wrapper-->
+            </div> <!--slider element-->
 
             <div class="controls-wrapper"> <!--controls-wrapper-->
                 <label class="box-controls">
