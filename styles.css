@@ -1,12 +1,14 @@
 body {
     margin: 0 auto;
     background-color: #1e2a37;
+    touch-action: manipulation;
 }
 
 .container {
     background-color: #1e2a37;
     height: fit-content;
-    width: fit-content;
+    width: 90%;
+    max-width: 720px;
     padding: 30px;
 }
 
