@@ -75,10 +75,17 @@ button:active {
     border: none;
     border-radius: 5px;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #4ede85;
     cursor: pointer;
     caret-color: transparent;
+}
+
+@media (max-width: 800px) {
+    .password-displays {
+        width: 300px;
+        font-size: 1.05rem;
+    }
 }
 
 .notifications {
@@ -271,7 +278,7 @@ button:active {
     }
 
     .slider-wrapper p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .password-length-header {
@@ -289,17 +296,17 @@ button:active {
 
     h1,
     h1 span {
-        font-size: 3rem
+        font-size: 2rem
     }
 
     p {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     .password-displays {
     height: 50px;
     width: 300px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     }
 
     #decrement-btn {
